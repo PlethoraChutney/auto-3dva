@@ -3,7 +3,11 @@ import os
 from glob import glob
 from chimera import runCommand as rc
 
+# cryosparc dir should be where your 'P##' project directories are
 cryosparc_dir = '/goliath/processing/BaconguisLab/posert/cryosparc'
+
+# output dir is where movies will end up, in the form:
+# output_dir/P##/J##_component##.mp4
 output_dir = '/troll/scratch/sw/troll_web/3dva'
 
 class Component:
@@ -22,7 +26,7 @@ class Component:
     rc('vol #0 step 1')
     rc('movie record')
     rc('vseries play #0 direction oscillate loop false normalize truei cacheFrames 30')
-    rc('wait 77')
+    rc('wait 60')
     rc('vseries stop #0')
     rc('movie stop')
     try:
