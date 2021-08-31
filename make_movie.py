@@ -25,7 +25,7 @@ class Component:
     rc('vseries open {}*.mrc'.format(self.map_location))
     rc('vol #0 step 1')
     rc('movie record')
-    rc('vseries play #0 direction oscillate loop false normalize truei cacheFrames 30')
+    rc('vseries play #0 direction oscillate loop false normalize true cacheFrames 30')
     rc('wait 60')
     rc('vseries stop #0')
     rc('movie stop')
